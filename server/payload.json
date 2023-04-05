@@ -1,0 +1,85 @@
+{
+    "dataColumns": [
+        {
+            "name": "asset_uri",
+            "assetValues": [
+                "B101",
+                "B201",
+                "B301",
+                "B401",
+                "B501"
+            ]
+        },
+        {
+            "name": "timestamp",
+            "datatype": "datetime"
+        },
+        {
+            "name": "isActive",
+            "datatype": "boolean"
+        },
+        {
+            "name": "natural_gas",
+            "datatype": "double",
+            "min": 0,
+            "max": 10000,
+            "precision": 3
+        },
+        {
+            "name": "electricity",
+            "datatype": "double",
+            "min": 0,
+            "max": 20000,
+            "precision": 3
+        },
+        {
+            "name": "temperature",
+            "datatype": "double",
+            "min": -1000,
+            "max": 1000,
+            "precision": 2
+        },
+        {
+            "name": "pressure",
+            "datatype": "double",
+            "min": 0,
+            "max": 10000,
+            "precision": 3
+        },
+        {
+            "name": "carbon_emission",
+            "datatype": "double",
+            "min": 0,
+            "max": 50000,
+            "precision": 2
+        },
+        {
+            "name": "totalCost",
+            "datatype": "double",
+            "min": 0,
+            "max": 100000,
+            "precision": 2
+        },
+        {
+            "name": "totalEnergy",
+            "datatype": "double",
+            "min": 0,
+            "max": 200000,
+            "precision": 2
+        },
+        {
+            "name": "latitude",
+            "datatype": "double",
+            "min": -90,
+            "max": 90,
+            "precision": 6
+        },
+        {
+            "name": "longitude",
+            "datatype": "double",
+            "min": -180,
+            "max": 180,
+            "precision": 6
+        }
+    ]
+}
