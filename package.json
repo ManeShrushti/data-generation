@@ -1,7 +1,7 @@
 {
-  "name": "task-poc",
+  "name": "data-generator",
   "version": "1.0.0",
-  "description": "task poc demo",
+  "description": "Generating demo data in json format",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
