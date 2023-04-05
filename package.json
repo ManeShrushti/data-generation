@@ -1,0 +1,17 @@
+{
+  "name": "task-poc",
+  "version": "1.0.0",
+  "description": "task poc demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Shrushti Mane",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "lodash": "^4.17.21",
+    "mongodb": "^2.2.28"
+  }
+}
