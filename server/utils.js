@@ -9,11 +9,6 @@ module.exports = {
             if(colName === 'timestamp'){
                 row[colName] = timestampValue;
             }
-            else if(colName === 'asset_uri'){
-                if(col.assetValues){
-                    row[colName] = getValueFromArray(col.assetValues);
-                } 
-            }
             else{
                 switch(dataType){
                     case 'double':
@@ -22,6 +17,11 @@ module.exports = {
                         }
                         else 
                             row[colName] = getRandomFloat(0,1000,2);  
+                        break;
+                    case 'point':
+                        if(col.values) {
+                            row[colName] = getValueFromArray(col.values);
+                        }
                         break;
                     case 'number':
                         if(col.min && col.max){    
@@ -36,6 +36,9 @@ module.exports = {
                         }
                         else if(col.length){
                             row[colName] = getRandomString(col.length);
+                        }
+                        else {
+                            row[colName] = getRandomString(10);
                         }
                         break;
                     case 'boolean':
