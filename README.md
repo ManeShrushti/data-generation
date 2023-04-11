@@ -58,7 +58,7 @@ Sample data point generated using this endpoint:
     "totalCost": 66003.1
 }
 ```
-**Note**: This data is static and values will be the same on every hit.
+> **Note**: This data is static and values will be the same on every hit.
 The data is retrived from _**server/dummyData.json**_ file.
 
 
@@ -107,7 +107,7 @@ Sample data point generated using this endpoint:
     "longitude": -113.591381
 },
 ```
-**Note**: The data keys are static but the values will be randomly generated on every hit.
+> **Note**: The data keys are static but the values will be randomly generated on every hit.
 
 
 ##
@@ -148,7 +148,7 @@ The first timestamp is always the the time of the API hit_
     "temperature" : 50.894
     ```
 
----
+#
 2) **number** : Generates random integer value within range.
     _* Default_ 
         - [min]: 0
@@ -170,7 +170,7 @@ The first timestamp is always the the time of the API hit_
     "pressure" : 72
     ```
 
----
+#
 3) **string** : Generates random string value.
         
      _* Default_ 
@@ -204,10 +204,9 @@ The first timestamp is always the the time of the API hit_
     Output:
     "name": "B77FatK6Fd"
     ```
-    **Note** : One of either values or length is required for random string data to be generated.
+    > **Note** : One of either values or length is required for random string data to be generated.
     
 #
-----
 
 4) **boolean** : Generates random boolean value
         
@@ -222,7 +221,6 @@ The first timestamp is always the the time of the API hit_
     ```
     
 #
-----
 
 4) **point** : Generates random array of values from the defined values
         
@@ -241,7 +239,6 @@ The first timestamp is always the the time of the API hit_
     ]
 
 #
-----
 
 _**Sample Payload**_
 ```json
@@ -312,7 +309,6 @@ _**Sample Payload**_
 ```
  
 #
-----
 _**Data Generated**_
 
 ```json
