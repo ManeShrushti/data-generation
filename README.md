@@ -127,8 +127,11 @@ The first timestamp is always the the time of the API hit_
 
     #
     _* Default_ 
+        
         - [min]: 0,
+        
         - [max]: 1000,
+        
         - [precision]: 2
     _* Override_ 
         - [min]: Minimum double value
