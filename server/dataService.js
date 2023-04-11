@@ -8,6 +8,10 @@ const INTERVAL = 10 * 1000; // 10 seconds in milliseconds
 module.exports = {
     getDummyData:function(req,cb){
         let lastTimestamp = Date.now();
+        let interval = INTERVAL;
+         if(req.query.interval){
+          interval = req.query.interval * 1000;
+        } 
         const filePath = './server/dummyData.json'; // Replace with your JSON file path
         fs.readFile(filePath, 'utf8', (err, data) => {
           if (err) {
@@ -16,14 +20,18 @@ module.exports = {
           }
           let jsonData = JSON.parse(data);
           // changing timestamp to current timestamp incrementing every 10 secs;
-          jsonData.map((dt)=>{ dt['timestamp'] = new Date(lastTimestamp).toISOString(); lastTimestamp += INTERVAL; })
+          jsonData.map((dt)=>{ dt['timestamp'] = new Date(lastTimestamp).toISOString(); lastTimestamp += interval; })
           return cb(null,jsonData);
         });
     },
 
     getData:function(req,cb){
         let lastTimestamp = Date.now();
-        let num_rows = 5;
+        let num_rows = 100;
+        let interval = INTERVAL;
+        if(req.query.interval){
+         interval = req.query.interval * 1000;
+       } 
         if(req.query.num_rows){
             num_rows  = req.query.num_rows;
         }
@@ -37,7 +45,7 @@ module.exports = {
           let payloadData = JSON.parse(data);
           for(let i=0;i<num_rows; i++){
              let timestampValue = new Date(lastTimestamp).toISOString(); 
-             lastTimestamp += INTERVAL;
+             lastTimestamp += interval;
              let row = utils.getRow(payloadData.dataColumns,timestampValue);
              resData.push(row);
           }
@@ -51,9 +59,13 @@ module.exports = {
             return cb('Error parsing the payload',null);
         }
         let resData = [];
+        let interval = INTERVAL;
+        if(queryObj.interval){
+         interval = queryObj.interval * 1000;
+        } 
         for(let i=0;i<queryObj.num_rows; i++){
            let timestampValue = new Date(lastTimestamp).toISOString(); 
-           lastTimestamp += INTERVAL;
+           lastTimestamp += interval;
            let row = utils.getRow(queryObj.dataColumns,timestampValue);
            resData.push(row);
         }
