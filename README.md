@@ -7,7 +7,8 @@ The data values of the desired datatypes, are set randomly within the given rang
 
 This api is live on the [Render](https://render.com/)
 
-_Refer to the [Available Section](/#available-endpoints) section on how to generate data using this live api_
+_Refer to the [Available Section](#available-endpoints) section on how to generate data using this live api_
+
 
 # Installation
 To install Data-Generator, run the following command:
@@ -58,11 +59,9 @@ Sample data point generated using this endpoint:
     "totalCost": 66003.1
 }
 ```
+
 > **Note**: This data is static and values will be the same on every hit.
 The data is retrived from _**server/dummyData.json**_ file.
-
-
-##
 
 ----
 
@@ -71,8 +70,9 @@ The data is retrived from _**server/dummyData.json**_ file.
 `https://data-generation-api.onrender.com/data?num_rows=(number of rows)&interval=(time_interval_in_seconds)`
 
 _**Optional parameter**_
-- num_rows: Number of rows to generate in the data
-- interval : Timestamp interval in seconds (default is set to 10 seconds)
+
+  - num_rows: Number of rows to generate in the data
+  - interval : Timestamp interval in seconds (default is set to 10 seconds)
  
 > _This endpoint generates n rows of random data for already defined attributes with 10 seconds(default) time interval between two data points.
 The first timestamp is always the the time of the API hit_ 
@@ -109,9 +109,6 @@ Sample data point generated using this endpoint:
 ```
 > **Note**: The data keys are static but the values will be randomly generated on every hit.
 
-
-##
-
 ----
 
 
@@ -125,7 +122,6 @@ The first timestamp is always the the time of the API hit_
 **Supported Datatypes**
 1) **double** : Generates random double value within range.
 
-    #
     _* Default_ 
         
         - [min]: 0,
@@ -134,11 +130,15 @@ The first timestamp is always the the time of the API hit_
         
         - [precision]: 2
     _* Override_ 
+        
         - [min]: Minimum double value
+        
         - [max]: Maximum double value
+        
         - [precision]: Floating points after decimals
         
     _* Example_ 
+    
     ```json
      {
             "name": "temperature",
@@ -153,15 +153,22 @@ The first timestamp is always the the time of the API hit_
 
 #
 2) **number** : Generates random integer value within range.
+    
     _* Default_ 
+        
         - [min]: 0
+        
         - [max]: 1000
         
-    _* Overrride_ 
+   
+   _* Overrride_ 
+        
         - [min]: Minimum numeric value
+        
         - [max]: Maximum numeric value
         
-    _* Example_ 
+   
+   _* Example_ 
     ```json
     {
             "name": "pressure",
@@ -176,14 +183,19 @@ The first timestamp is always the the time of the API hit_
 #
 3) **string** : Generates random string value.
         
+     
      _* Default_ 
+     
         - [length]: 10
      
         
     _* Overrride_ 
         
+        
         - [values]: Range of possible values 
-        **OR**
+       
+       **OR**
+        
         - [length]: Length of the string to be generated
     
 
@@ -242,6 +254,7 @@ The first timestamp is always the the time of the API hit_
     ]
 
 #
+
 
 _**Sample Payload**_
 ```json
@@ -312,6 +325,7 @@ _**Sample Payload**_
 ```
  
 #
+
 _**Data Generated**_
 
 ```json
