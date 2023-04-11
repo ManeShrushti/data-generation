@@ -58,7 +58,7 @@ Sample data point generated using this endpoint:
     "totalCost": 66003.1
 }
 ```
->  **Note**: This data is static and values will be the same on every hit.
+**Note**: This data is static and values will be the same on every hit.
 The data is retrived from _**server/dummyData.json**_ file.
 
 
@@ -107,7 +107,7 @@ Sample data point generated using this endpoint:
     "longitude": -113.591381
 },
 ```
->  **Note**: The data keys are static but the values will be randomly generated on every hit.
+**Note**: The data keys are static but the values will be randomly generated on every hit.
 
 
 ##
@@ -142,7 +142,7 @@ The first timestamp is always the the time of the API hit_
             "max": 100,
             "precision": 3
     }
-    Output: 
+    Output:
     "temperature" : 50.894
     ```
 
@@ -164,7 +164,7 @@ The first timestamp is always the the time of the API hit_
             "min": -100,
             "max": 100
     }
-     Output: 
+    Output:
     "pressure" : 72
     ```
 
@@ -190,19 +190,19 @@ The first timestamp is always the the time of the API hit_
              "datatype": "string",
             "values": ["B101","B102"] 
     }
+    ```
     Output:
     "asset_uri": "B101"
-    ```
      ```json
     {
             "name": "name",
             "datatype": "string",
             "length": 10
     }
-    Output: 
+    Output:
     "name": "B77FatK6Fd"
     ```
-    > **Note** : One of either values or length is required for random string data to be generated.
+    **Note** : One of either values or length is required for random string data to be generated.
     
 #
 ----
@@ -215,7 +215,7 @@ The first timestamp is always the the time of the API hit_
             "name": "asset_avail",
             "datatype": "boolean"
     }
-    Output: 
+    Output:
     "asset_avail": true,
     ```
     
