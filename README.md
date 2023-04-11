@@ -124,6 +124,8 @@ The first timestamp is always the the time of the API hit_
 
 **Supported Datatypes**
 1) **double** : Generates random double value within range.
+
+    #
     _* Default_ 
         - [min]: 0,
         - [max]: 1000,
@@ -171,7 +173,6 @@ The first timestamp is always the the time of the API hit_
 ---
 3) **string** : Generates random string value.
         
-
      _* Default_ 
         - [length]: 10
      
@@ -190,9 +191,10 @@ The first timestamp is always the the time of the API hit_
              "datatype": "string",
             "values": ["B101","B102"] 
     }
-    ```
     Output:
     "asset_uri": "B101"
+    ```
+
      ```json
     {
             "name": "name",
