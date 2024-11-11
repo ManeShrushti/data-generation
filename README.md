@@ -5,7 +5,7 @@ Data-Generator is a Node.js library that provides an easy way to generate random
 The data values of the desired datatypes, are set randomly within the given range or within the scope of provided values.
 
 
-This api is live on the [Render](https://render.com/)
+This api is live on the [Render]([https://render.com/](https://data-generation-api.onrender.com))
 
 _Refer to the [Available Section](#available-endpoints) section on how to generate data using this live api_
 
